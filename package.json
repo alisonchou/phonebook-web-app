@@ -1,0 +1,15 @@
+{
+  "name": "fso-phonebook-p3",
+  "version": "1.0.0",
+  "description": "Phonebook part 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "fso-phonebook-p3"
+  },
+  "author": "alisonchou",
+  "license": "MIT"
+}

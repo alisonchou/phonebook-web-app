@@ -1,0 +1,190 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "number": "523-993-2444"
+}
+
+<> 2020-12-08T120314.400.json
+
+###
+
+GET http://localhost:3001/api/persons
+
+<> 2020-12-08T120309.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "number": "523-993-2444"
+}
+
+<> 2020-12-08T120304.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+
+<> 2020-12-08T120256.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "number": "523-993-2444"
+}
+
+<> 2020-12-08T115839.200.json
+
+###
+
+GET http://localhost:3001/api/persons
+
+<> 2020-12-08T115316.200.json
+
+###
+
+DELETE http://localhost:3001/api/persons/5
+
+###
+
+GET http://localhost:3001/api/persons
+
+<> 2020-12-08T115258.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "number": "523-993-2444"
+}
+
+<> 2020-12-08T115252.200.json
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "content": "My new one",
+  "important": false
+}
+
+<> 2020-12-08T115213.400.json
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content": "My new one",
+  "important": false
+}
+
+<> 2020-12-08T104427.200.json
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content": "My new one",
+  "important": false
+}
+
+<> 2020-12-08T104336.200.json
+
+###
+
+GET http://localhost:3001/api/notes
+
+<> 2020-12-08T103917.200.json
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content": "My new one",
+  "important": false
+}
+
+<> 2020-12-08T103710.200.json
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content": "My new one",
+  "important": false
+}
+
+<> 2020-12-08T103646.200.json
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content": "My new one",
+  "important": false
+}
+
+<> 2020-12-08T103622.200.json
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content": "My new one",
+  "important": false
+}
+
+<> 2020-12-08T103613.200.json
+
+###
+
+POST http://localhost:3001/api/notes
+Content-Type: application/json
+
+{
+  "content": "My new one",
+  "important": false
+}
+
+<> 2020-12-08T103544.200.json
+
+###
+
+GET http://localhost:3001/api/notes
+
+<> 2020-12-07T083608.200.json
+
+###
+
+GET http://localhost:3001/api/notes
+
+<> 2020-12-07T082811.200.json
+
+###
+

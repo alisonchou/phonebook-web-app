@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config() //env vars available globally
 const express = require('express')
 const app = express()
 const morgan = require('morgan')

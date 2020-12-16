@@ -2,12 +2,30 @@ POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
-  "name": "Test User",
-  "number": "523-993-2444"
+  "name": "Person Coo",
+  "number": "523-2444"
+}
+
+###
+PUT http://localhost:3001/api/persons/5fda3fcc8ee98160cc072837
+Content-Type: application/json
+
+{
+  "name": "Person Cool",
+  "number": "3"
 }
 
 ###
 GET http://localhost:3001/api/persons
 
 ###
+GET http://localhost:3001/api/persons/5
+
+###
+GET http://localhost:3001/api/persons/5fd94615c368603f5014a355
+
+###
 DELETE http://localhost:3001/api/persons/5
+
+###
+DELETE http://localhost:3001/api/persons/5fd94615c368603f5014a355

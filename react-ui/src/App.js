@@ -57,20 +57,25 @@ const App = () => {
             number: newNumber
         }
         if (persons.some(person => person.name === newName)) {
-            /*if (window.confirm(`${newName} is already added to phonebook. Replace the old number?`)) {
+            if (window.confirm(`${newName} is already added to phonebook. Replace the old number?`)) {
                 persons.forEach(person => {
                     if (person.name === newName) {
-                        pService.update(person.id, personObj).then(updatedPrsn => {
-                            setPersons(persons.map(p => p.id !== person.id ? p : updatedPrsn))
-                        }).catch(error => alert("Could not update person"))
+                        pService.update(person.id, personObj).then(updated => {
+                            setPersons(persons.map(p => p.id !== person.id ? p : updated))
+                        }).catch(error => {
+                            setMessage({text: error.response.data.error, success: false})
+                            setTimeout(() => setMessage(null), 5000)
+                        })
                     }
                 })
-            }*/
+            }
         } else {
             pService.create(personObj).then(newPerson => {
                 setPersons(persons.concat(newPerson))
+                setMessage({text: `Added ${newName}`, success: true})
+            }).catch(error => {
+                setMessage({text: error.response.data.error, success: false})
             })
-            setMessage({text: `Added ${newName}`, success: true})
             setTimeout(() => setMessage(null), 5000)
         }
         setNewName('')

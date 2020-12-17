@@ -7,12 +7,12 @@ Content-Type: application/json
 }
 
 ###
-PUT http://localhost:3001/api/persons/5fda63ba1ef6c23080a45bf3
+PUT http://localhost:3001/api/persons/5fda483c5eb2c54de039b6c2
 Content-Type: application/json
 
 {
-  "name": "t444444",
-  "number": "355555555"
+  "name": "t444 test",
+  "number": "wolf cry"
 }
 
 ###

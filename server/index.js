@@ -6,7 +6,7 @@ const Person = require('./models/person')
 app.use(express.json())
 app.use(express.static('build'))
 
-morgan.token('body', (req) => JSON.stringify(req.body));
+morgan.token('body', (req) => JSON.stringify(req.body))
 app.use(morgan(function (tokens, req, res) {
     if (req.method === 'POST') {
         return [
@@ -21,11 +21,12 @@ app.use(morgan(function (tokens, req, res) {
 }))
 
 app.get('/info', (request, response) => {
-    const currentDate = new Date()
-    response.send(`<div>
-        <p>Phonebook has info for ${persons.length} people</p>
-        <p>${new Date()}</p>
-    </div>`)
+    Person.countDocuments({}).then(numPersons => {
+        response.send(`<div>
+            <p>Phonebook has info for ${numPersons} people</p>
+            <p>${new Date()}</p>
+            </div>`)
+    })
 })
 
 app.get('/api/persons', (request, response) => {
@@ -45,7 +46,7 @@ app.get('/api/persons/:id', (request, response, next) => {
 })
 
 app.delete('/api/persons/:id', (request, response, next) => {
-    Person.findByIdAndRemove(request.params.id).then(result => {
+    Person.findByIdAndRemove(request.params.id).then(() => {
         response.status(204).end()
     }).catch(error => next(error))
 })
@@ -67,17 +68,8 @@ app.post('/api/persons', (request, response, next) => {
 })
 
 app.put('/api/persons/:id', (request, response, next) => {
-    const body = request.body
-    const person = {
-        name: body.name,
-        number: body.number,
-    }
-    console.log(request.params.id)
-    console.log(body)
-    console.log(person)
-    Person.findByIdAndUpdate(request.params.id, person, { new: true, runValidators: true, context: 'query' })
+    Person.findByIdAndUpdate(request.params.id, request.body, { new: true, runValidators: true, context: 'query' })
         .then(updated => {
-            console.log(updated)
             response.json(updated)
         })
         .catch(error => next(error))

@@ -3,6 +3,9 @@ A phonebook web app where users can create, update, delete,
 and filter contacts. Live at
 [fullpages.herokuapp.com](https://fullpages.herokuapp.com/).
 
+To replace a contact's number, create a new contact with the
+same name and select `OK` on the alert that pops up.
+
 ## ⚙ Technologies
 - Backend: Node.js - Express
   - Mongoose to connect to MongoDB

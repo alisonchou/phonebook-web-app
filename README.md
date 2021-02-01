@@ -1,4 +1,4 @@
-# Phonebook App
+# Phonebook App - FullPages
 A phonebook web app where users can create, update, delete,
 and filter contacts. Live at
 [fullpages.herokuapp.com](https://fullpages.herokuapp.com/).

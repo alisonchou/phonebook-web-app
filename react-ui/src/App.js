@@ -4,19 +4,19 @@ import Filter from './components/Filter';
 import Persons from './components/Persons';
 import pService from './services/persons'
 
-const Notification = ({message}) => {
+const Notification = ({ message }) => {
     if (message === null) {
         return null
     }
     if (message.success) {
         return (
-            <div className="success">
+            <div className='success'>
                 {message.text}
             </div>
         )
     } else {
         return (
-            <div className="error">
+            <div className='error'>
                 {message.text}
             </div>
         )
@@ -85,21 +85,21 @@ const App = () => {
     const handleDelete = id => {
         if (window.confirm('Delete?'))
             pService.remove(id).then(() => setPersons(persons.filter(person => person.id !== id)))
-                .catch(error => {
+                .catch(() => {
                     setMessage({text: 'Could not delete. Try again', success: false})
                     setTimeout(() => setMessage(null), 5000)
                 })
     }
 
     return (
-        <div>
+        <div className='container'>
             <Notification message={message} />
             <h2>Phonebook</h2>
             <Filter filter={filter} handleFilter={handleFilter} />
-            <h3>add a new</h3>
+            <h3>add a contact</h3>
             <PersonForm newName={newName} handleNewName={handleNewName} newNumber={newNumber}
                         handleNewNumber={handleNewNumber} addPerson={addPerson} />
-            <h3>Numbers</h3>
+            <h3>contacts</h3>
             <Persons persons={personsToShow} handleDelete={handleDelete} />
         </div>
     )
